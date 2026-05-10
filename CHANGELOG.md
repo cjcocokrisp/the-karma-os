@@ -1,0 +1,54 @@
+## The Karma OS Changelog
+
+All manual updates will be documented in this file.
+
+Semantic versions are used for versioning. In each version the number
+represents what is described below:
+
+- X: Major version, will be bumped when there is a drastic change
+in config. For example, major styling or new apps that run system stuff like status bars etc.
+- Y: Minor version, will be bumped when I add a new
+program or something into the image that is not super
+major.
+- Z: Fixes, will be bumped when a fix needs to happen
+
+### v1.0.0 - Summer Fragrance 
+
+The first release of the image! This has been an idea in my head for
+sometime now and I'm happy that I finally got around to completing it.
+Switching to Hyprland has been such an awesome move and I can't wait to
+use it more. I'm calling this theme summer fragrance based on [this](https://www.youtube.com/watch?v=v578L0gGcIU&themeRefresh=1)
+music track.
+
+#### Contents
+- Hyprland is used for desktop environment
+- Preconfigured dot files for Hyprland
+- Pywal automatically generates a color scheme from predefined background image
+- Brew is provided to install packages locally easier if its not baked into the image
+- The following are installed for system related stuff
+  - Status Bar - Waybar
+  - Notifications - Mako
+  - App Launcher - Rofi
+  - Lock - Hyprlock
+  - Screenshot tool - Hyprshot
+  - Bluetooth applet - blueman-applet
+  - Network applet - nm-applet
+  - Widget Dashboard - eww
+  - Terminal - kitty
+  - Wallpaper tool - Hyprpaper
+- The following CLI based programs are installed:
+  - nvim
+  - btop
+  - tmux
+- The below apps that I use are included:
+  - Steam
+  - Discord
+  - Zen Browser
+  - Spotify
+  - Retroarch
+  - EmulationStation DE
+  - Bitwarden Password Manager
+  - Visual Studio Code
+  - OBS Studio
+- Set up instructions on how to download and get started using this image along with
+information on using with multimonitor & ultrawide

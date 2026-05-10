@@ -1,16 +1,17 @@
----
-name: Build container image
+name: Build and push container image
 on:
-  pull_request:
-    branches:
-      - main
-  schedule:
-    - cron: '05 10 * * *'  # 10:05am UTC everyday
   push:
     branches:
       - main
     paths-ignore:
       - '**/README.md'
+      - '**/README-ublue.md'
+      - '**/.gitignore'
+      - '**/LICENSE'
+      - '**/CHANGELOG.md'
+  schedule:
+    # Everyday at midnight in EST
+    - cron: '0 5 * * *'
   workflow_dispatch:
 
 env:
@@ -46,6 +47,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
+      # Build and export tag to use for this build based on commit hash
+      - name: Build and export tag to use
+        run: |
+          set -xue
+
+          if [[ "GITHUB_EVENT_NAME" == "schedule" ]]; then
+            echo "IMAGE_TAG=nightly-$(date +%Y.%m.%d)" >> ${GITHUB_ENV}
+          else
+            echo "IMAGE_TAG=commit-$(git rev-parse --short HEAD)" >> ${GITHUB_ENV}
+          fi
+
       # This is optional, but if you see that your builds are way too big for the runners, you can enable this by uncommenting the following lines:
       - name: Maximize build space
         uses: ublue-os/remove-unwanted-software@695eb75bc387dbcd9685a8e72d23439d8686cba6
@@ -69,10 +81,7 @@ jobs:
           # Default tags are "$DEFAULT_TAG" and "$DEFAULT_TAG.$date".
           tags: |
             type=raw,value=${{ env.DEFAULT_TAG }}
-            type=raw,value=${{ env.DEFAULT_TAG }}.{{date 'YYYYMMDD'}}
-            type=raw,value={{date 'YYYYMMDD'}}
-            type=sha,enable=${{ github.event_name == 'pull_request' }}
-            type=ref,event=pr
+            type=raw,value=${{ env.IMAGE_TAG }}
           labels: |
             io.artifacthub.package.readme-url=https://raw.githubusercontent.com/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}/${{ github.sha }}/README.md
             org.opencontainers.image.created=${{ steps.date.outputs.date }}
