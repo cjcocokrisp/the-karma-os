@@ -35,11 +35,21 @@ RUN dnf5 install -y git \
 # Clone git repo so there is a copy on the system at all times
 RUN git clone https://github.com/cjcocokrisp/the-karma-os.git /usr/share/the-karma-os
 
+# Copy file for quiet printk so console doesn't get spammed on boot
+RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
+    cp /ctx/20-quiet-printk.conf /etc/sysctl.d/20-quiet-printk.conf
+
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
-    /ctx/build-hyprland.sh
+    /ctx/install-packages.sh
+
+RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
+    --mount=type=cache,dst=/var/cache \
+    --mount=type=cache,dst=/var/log \
+    --mount=type=tmpfs,dst=/tmp \
+    /ctx/setup-hyprland.sh
     
 ### LINTING
 ## Verify final image and contents are correct.
