@@ -1,0 +1,122 @@
+// -*- mode: jsonc -*-
+{
+  "height": 28, // Waybar height (to be removed for auto height)
+  "spacing": 4, // Gaps between modules (4px)
+  "margin-top": 3,
+  "margin-left": 5,
+  "margin-right": 5,
+  // Choose the order of the modules
+  "modules-left": [
+    "custom/logo",
+    "custom/separator",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "custom/media-or-window"
+  ],
+  "modules-right": [
+    "custom/egv",
+    "custom/separator",
+    "cpu",
+    "custom/separator",
+    "memory",
+    "custom/separator",
+    "temperature",
+    "custom/separator",
+    "battery",
+    "custom/separator",
+    "clock"
+  ],
+  "clock": {
+    "format": "{:%I:%M %p}"
+  },
+  "hyprland/workspaces": {
+    "player": "spotify",
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  "mpris": {
+    "format": "{player_icon} {title} - {artist}",
+    "format-paused": "{player_icon} {title} - {artist}",
+    "format-stopped": "",
+    "player-icons": {
+      "spotify": ""
+    },
+    "max-length": 70
+  },
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon}  <span foreground='#f2f0ed'>{capacity}%</span>",
+    "format-full": "{icon}  <span foreground='#f2f0ed'>{capacity}%</span>",
+    "format-charging": "{icon}  <span foreground='#f2f0ed'>{capacity}%</span>",
+    "format-plugged": "{icon}  <span foreground='#f2f0ed'>{capacity}%</span>",
+    "format-alt": "{time} {icon}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "cpu": {
+    "format": "CPU <span foreground='#f2f0ed'>{usage}%</span>",
+    "on-click": "kitty -e btop"
+  },
+  "memory": {
+    "format": "RAM <span foreground='#f2f0ed'>{percentage}%</span>",
+    "on-click": "kitty -e btop"
+  },
+  "temperature": {
+    "format": "TMP <span foreground='#f2f0ed'>{temperatureF}°F</span>",
+    "on-click": "kitty -e btop"
+  },
+  "custom/logo": {
+    "format": "{{<span foreground='#f2f0ed'>C</span>}}",
+    "interval": "once",
+    "tooltip": false,
+    "on-click": "~/scripts/eww-open-close.sh dashboard"
+  },
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/egv": {
+    "exec": "cd ~/scripts/dexcom && go run dexcom.go",
+    "interval": 300,
+    "format": "EGV <span foreground='#f2f0ed'>{}</span>",
+    "on-click": "cd ~/scripts/dexcom && go run dexcom.go"
+  },
+  "custom/media-or-window": {
+    "exec": "~/scripts/media-or-window.sh",
+    "signal": 8,
+    "max-length": 70,
+    "return-type": "text",
+    "escape": true,
+    "markup": false
+  }
+}

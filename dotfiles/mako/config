@@ -1,0 +1,22 @@
+# Global Style & Behavior
+font=Source Code Pro 10
+background-color=#221c2b
+text-color=#c2c2c6
+border-size=2
+border-color=#6f7483
+border-radius=7
+width=350
+height=110
+margin=10
+padding=10
+
+# Behavior Options
+default-timeout=5000
+icons=1
+max-icon-size=64
+sort=-time
+
+# Interaction Bindings
+on-button-left=dismiss
+on-button-right=dismiss-all
+on-button-middle=invoke-default-action

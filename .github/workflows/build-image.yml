@@ -53,7 +53,7 @@ jobs:
         run: |
           set -xue
 
-          if [[ "GITHUB_EVENT_NAME" == "schedule" ]]; then
+          if [[ "$GITHUB_EVENT_NAME" == "schedule" ]]; then
             echo "IMAGE_TAG=nightly-$(date +%Y.%m.%d)" >> ${GITHUB_ENV}
           else
             echo "IMAGE_TAG=commit-$(git rev-parse --short HEAD)" >> ${GITHUB_ENV}

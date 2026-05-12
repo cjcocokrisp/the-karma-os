@@ -6,7 +6,7 @@ set -ouex pipefail
 # Enable copr repos
 dnf copr enable -y solopasha/hyprland
 dnf copr enable -y sneexy/zen-browser
-dnf copr enable -y varlad/eww 
+dnf copr enable -y varlad/eww
 dnf copr enable -y che/nerd-fonts
 
 # Set up RPM fusion & terra repo
@@ -60,4 +60,3 @@ pipx install --global pywal16
 # need to set up zsh still
 # need to do flatpaks still
 # need to also do spotify and emulation
-

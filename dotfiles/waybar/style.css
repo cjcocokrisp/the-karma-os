@@ -1,0 +1,77 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+* {
+    font-family: "Source Code Pro";
+    font-size: 12px;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+window#waybar {
+    background-color: #221c2b;
+    color: @foreground;
+    font-size: 14px;
+    border-radius: 7px;
+}
+
+#mpris {
+  margin-right: 10px;
+}
+
+#mpris {
+  opacity: 0;
+}
+
+#mypris.playing {
+  opacity: 1;
+}
+
+#mypris.playing + #window {
+  opacity: 0;
+}
+
+#custom-logo {
+    color: #e93d58;
+}
+
+#workspaces button {
+  color: @color2;
+  padding: 0 1px;
+}
+
+#cpu {
+    color:#a49ca4;
+}
+
+#memory {
+    color:#a49ca4;
+}
+
+#temperature {
+    color:#a49ca4;
+}
+
+#clock {
+    color: #a49ca4;
+}
+
+#battery {
+    color: #a49ca4;
+    background-color: transparent;
+}
+
+#battery.critical.discharging {
+}
+
+#custom-egv {
+    color: #a49ca4;
+}
+
+#custom-spotify {
+    color: #a49ca4;
+}
+
+#custom-separator {
+    color: #61666e;
+    padding: 0
+}

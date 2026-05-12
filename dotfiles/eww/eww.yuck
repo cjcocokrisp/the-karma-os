@@ -1,0 +1,64 @@
+(defvar IMAGE "images/pfp.png")
+(defvar NAME "Christopher Coco")
+(defpoll USERNAME :interval "5m" `whoami`)
+(defpoll HOSTNAME :interval "5m" `cat /etc/hostname`)
+(defpoll UPTIME :interval "1s" `awk '{printf "%02d:%02d:%02d", int($1/3600), int(($1%3600)/60), int($1%60)}' /proc/uptime`)
+(defpoll CURRENT_VOLUME :interval "1s" `wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2 * 100}'`)
+(defpoll WIFI_CONNECTION :interval "5s" `~/scripts/get-wifi-connection.sh`)
+(defpoll BLUETOOTH_STATUS :interval "5s" `~/scripts/get-bluetooth-status.sh`)
+
+
+(defwindow dashboard
+  :monitor 0
+  :geometry (geometry :x "5px"
+                      :y "5px"
+                      :width "40%"
+                      :height "20%"
+                      :anchor "top left"
+            )
+  :stacking "fg"
+  :windowtype "dock"
+  :wm-ignore false
+  (main-container))
+
+(defwidget main-container []
+  (box :orientation "h" :space-evenly "false" :spacing 10 :hexpand "true" :vexpand "true"
+    (box :orientation "v" :space-evenly "false" :spacing 10 :hexpand: "true"
+      (profile-card)
+      (systray-card))))
+
+;;    (box :orientation "v" :space-evenly "false" :spacing 10 :hexpand: "true"
+;;      (volume-card)
+;;      (wifi-card)
+;;     (bluetooth-card))))
+
+(defwidget profile-card []
+  (box :class "card" :orientation "h" :space-evenly "false" :spacing 15
+    (box :style "background-image: url('${IMAGE}');" :class "pfp" :valign "center")
+    (box :orientation "v" :space-evenly "false" :spacing 12 :valign "center"
+      (label :class "bold-text" :text "${NAME}")
+      (label :class "bold-text" :text "${USERNAME}@${HOSTNAME}")
+      (label :class "bold-text" :text "Uptime: ${UPTIME}"))))
+
+(defwidget volume-card []
+  (box :class "card" :orientation "h" :spacing 15 :space-evenly "true"
+    (label :class "bold-text" :text "VOLUME")
+    (label :class "normal-text" :text "${CURRENT_VOLUME}%")))
+
+(defwidget wifi-card []
+  (box :class "card" :orientation "h" :spacing 15 :space-evenly "true"
+    (label :class "bold-text" :text "WIFI")
+    (label :class "normal-text" :text "${WIFI_CONNECTION}")))
+
+
+(defwidget bluetooth-card []
+  (box :class "card" :orientation "h" :spacing 15 :space-evenly "true"
+    (label :class "bold-text" :text "BLUETOOTH")
+    (label :class "normal-text" :text "${BLUETOOTH_STATUS}")))
+
+(defwidget systray-card []
+  (box :class "card" :orientation "h" :space-evenly "false" :spacing 15
+    (label :class "bold-text" :text "")
+    (label :class "normal-text" :text "${CURRENT_VOLUME}%") 
+    (systray :class "systemtray" :orientation "h" :spacing 5)))
+

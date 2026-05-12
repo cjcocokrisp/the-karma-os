@@ -1,0 +1,41 @@
+@import '../../.cache/wal/colors.scss'
+
+* {
+  all: unset;
+  font-family: "Source Code Pro";
+  font-size: 14px;
+  border-radius: 7px;
+}
+
+.card {
+  background: #221c2b;
+  padding: 10px;
+}
+
+.fixed-width {
+}
+
+.pfp {
+  background-size: 125px;
+  min-width: 125px;
+  min-height: 125px;
+  border-radius: 50%;
+  border: 3px solid $color15;
+}
+
+.bold-text {
+  font-weight: bold;
+  color: $color15;
+}
+
+.normal-text {
+  color: $color15;
+}
+
+.systemtray menu {
+  background-color: #221c2b; /* Change to your desired color */
+  padding: 5px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
