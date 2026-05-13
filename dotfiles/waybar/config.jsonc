@@ -67,10 +67,10 @@
       "warning": 20,
       "critical": 10
     },
-    "format": "{icon}  <span foreground='#f2f0ed'>{capacity}%</span>",
-    "format-full": "{icon}  <span foreground='#f2f0ed'>{capacity}%</span>",
-    "format-charging": "{icon}  <span foreground='#f2f0ed'>{capacity}%</span>",
-    "format-plugged": "{icon}  <span foreground='#f2f0ed'>{capacity}%</span>",
+    "format": "{icon}  <span foreground='#c2c2c6'>{capacity}%</span>",
+    "format-full": "{icon}  <span foreground='#c2c2c6'>{capacity}%</span>",
+    "format-charging": "{icon}  <span foreground='#c2c2c6'>{capacity}%</span>",
+    "format-plugged": "{icon}  <span foreground='#c2c2c6'>{capacity}%</span>",
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
@@ -83,19 +83,19 @@
     ]
   },
   "cpu": {
-    "format": "CPU <span foreground='#f2f0ed'>{usage}%</span>",
+    "format": "CPU <span foreground='#c2c2c6'>{usage}%</span>",
     "on-click": "kitty -e btop"
   },
   "memory": {
-    "format": "RAM <span foreground='#f2f0ed'>{percentage}%</span>",
+    "format": "RAM <span foreground='#c2c2c6'>{percentage}%</span>",
     "on-click": "kitty -e btop"
   },
   "temperature": {
-    "format": "TMP <span foreground='#f2f0ed'>{temperatureF}°F</span>",
+    "format": "TMP <span foreground='#c2c2c6'>{temperatureF}°F</span>",
     "on-click": "kitty -e btop"
   },
   "custom/logo": {
-    "format": "{{<span foreground='#f2f0ed'>C</span>}}",
+    "format": "{{<span foreground='#c2c2c6'>C</span>}}",
     "interval": "once",
     "tooltip": false,
     "on-click": "~/scripts/eww-open-close.sh dashboard"
@@ -108,7 +108,7 @@
   "custom/egv": {
     "exec": "cd ~/scripts/dexcom && go run dexcom.go",
     "interval": 300,
-    "format": "EGV <span foreground='#f2f0ed'>{}</span>",
+    "format": "EGV <span foreground='#c2c2c6'>{}</span>",
     "on-click": "cd ~/scripts/dexcom && go run dexcom.go"
   },
   "custom/media-or-window": {

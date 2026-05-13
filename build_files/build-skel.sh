@@ -6,7 +6,8 @@ mkdir -p /etc/skel/{Desktop,Documents,Downloads,Music,Pictures,Videos}
 mkdir -p /etc/skel/.config
 
 # Move wallpapers into pictures
-cp /usr/share/the-karma-os/wallpapers/summer-fragrance* /etc/skel/Pictures
+cp /usr/share/the-karma-os/wallpapers/summer-fragrance.jpg /etc/skel/Pictures/wallpaper.jpg
+cp /usr/share/the-karma-os/wallpapers/summer-fragrance_ultrawide.jpg /etc/skel/Pictures/wallpaper_ultrawide.jpg
 
 # Copy dotfiles into .config
 cp -r /usr/share/the-karma-os/dotfiles/hypr /etc/skel/.config/
