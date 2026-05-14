@@ -41,9 +41,10 @@
       (label :class "bold-text" :text "Uptime: ${UPTIME}"))))
 
 (defwidget volume-card []
-  (box :class "card" :orientation "h" :spacing 15 :space-evenly "true"
-    (label :class "bold-text" :text "VOLUME")
-    (label :class "normal-text" :text "${CURRENT_VOLUME}%")))
+  (eventbox :onclick "pavucontrol" :cursor "pointer"
+    (box :class "card" :orientation "h" :spacing 15 :space-evenly "true"
+      (label :class "bold-text" :text "VOLUME")
+      (label :class "normal-text" :text "${CURRENT_VOLUME}%"))))
 
 (defwidget wifi-card []
   (box :class "card" :orientation "h" :spacing 15 :space-evenly "true"
@@ -58,7 +59,9 @@
 
 (defwidget systray-card []
   (box :class "card" :orientation "h" :space-evenly "false" :spacing 15
-    (label :class "bold-text" :text "")
-    (label :class "normal-text" :text "${CURRENT_VOLUME}%") 
+    (eventbox :onclick "pavucontrol &" :cursor "pointer"
+    (box :class "card" :orientation "h" :spacing 15 :space-evenly "true"
+      (label :class "bold-text" :text "")
+      (label :class "normal-text" :text "${CURRENT_VOLUME}%"))) 
     (systray :class "systemtray" :orientation "h" :spacing 5)))
 

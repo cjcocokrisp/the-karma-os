@@ -25,6 +25,7 @@ dnf5 install -y hyprland \
   tuned-ppd \
   kitty \
   waybar \
+  eww \
   hyprpolkitagent \
   nautilus \
   pavucontrol \
@@ -41,6 +42,8 @@ dnf5 install -y hyprland \
   hyprpaper \
   nautilus \
   rofi \
+  vim \
+  nvim \
   discord \
   steam \
   gamescope \
@@ -51,6 +54,9 @@ dnf5 install -y hyprland \
   timg \
   btop \
   nerd-fonts \
+  sourcecodepro-nerd-fonts \
+  pavucontrol \
+  ImageMagick \
   breeze-cursor-theme
 
 # remove terra repo because it was causing ISO build errors due to no GPG key
