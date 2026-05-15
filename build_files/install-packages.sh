@@ -54,6 +54,7 @@ dnf5 install -y hyprland \
   timg \
   btop \
   nerd-fonts \
+  adobe-source-code-pro-fonts \
   sourcecodepro-nerd-fonts \
   pavucontrol \
   ImageMagick \

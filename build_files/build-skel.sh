@@ -16,6 +16,7 @@ cp -r /usr/share/the-karma-os/dotfiles/mako /etc/skel/.config/
 cp -r /usr/share/the-karma-os/dotfiles/rofi /etc/skel/.config/
 cp -r /usr/share/the-karma-os/dotfiles/waybar /etc/skel/.config/
 cp -r /usr/share/the-karma-os/dotfiles/fastfetch /etc/skel/.config/
+cp -r /usr/share/the-karma-os/dotfiles/eww /etc/skel/.config/
 
 # Clone my nvim config
 git clone https://github.com/cjcocokrisp/nvim /etc/skel/.config/nvim
