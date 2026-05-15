@@ -117,5 +117,8 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 python ~/scripts/terminal-header/display.py
 
+export EDITOR="vim"
+export VISUAL="vim"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -14,7 +14,7 @@ dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-releas
 dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
 #  Upgrade all packages
-dnf upgrade
+dnf -y upgrade
 
 # Install packages
 dnf5 install -y hyprland \
@@ -26,7 +26,8 @@ dnf5 install -y hyprland \
   kitty \
   tmux \
   waybar \
-  eww \ hyprpolkitagent \
+  eww \
+  hyprpolkitagent \
   nautilus \
   pavucontrol \
   alsa-sof-firmware \
@@ -83,6 +84,7 @@ pipx install --global pywal16
 
 # flatpak installs
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install org.freedesktop.Platform
 flatpak install flathub com.bitwarden.desktop
 flatpak install flathub com.spotify.Client
 flatpak install flathub com.visualstudio.code
