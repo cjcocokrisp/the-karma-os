@@ -58,7 +58,12 @@ dnf5 install -y hyprland \
   sourcecodepro-nerd-fonts \
   pavucontrol \
   ImageMagick \
-  breeze-cursor-theme
+  breeze-cursor-theme \
+  mako \
+  go \
+  zsh \
+  zsh-autosuggestions \
+  zsh-syntax-highlighting
 
 # remove terra repo because it was causing ISO build errors due to no GPG key
 rm /etc/yum.repos.d/terra.repo

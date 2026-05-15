@@ -29,6 +29,7 @@ FROM quay.io/fedora/fedora-bootc:43
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
+# Install things needed for all the steps
 RUN dnf5 install -y git \
                     'dnf5-command(copr)'
 
