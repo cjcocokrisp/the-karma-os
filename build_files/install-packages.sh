@@ -84,7 +84,7 @@ pipx install --global pywal16
 
 # flatpak installs
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install org.freedesktop.Platform
-flatpak install flathub com.bitwarden.desktop
-flatpak install flathub com.spotify.Client
-flatpak install flathub com.visualstudio.code
+flatpak install -y --noninteractive flathub org.freedesktop.Platform//24.08
+flatpak install -y --noninteractive flathub com.bitwarden.desktop
+flatpak install -y --noninteractive flathub com.spotify.Client
+flatpak install -y --noninteractive flathub com.visualstudio.code
