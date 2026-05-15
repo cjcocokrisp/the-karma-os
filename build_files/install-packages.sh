@@ -24,9 +24,9 @@ dnf5 install -y hyprland \
   tuned \
   tuned-ppd \
   kitty \
+  tmux \
   waybar \
-  eww \
-  hyprpolkitagent \
+  eww \ hyprpolkitagent \
   nautilus \
   pavucontrol \
   alsa-sof-firmware \
@@ -63,15 +63,26 @@ dnf5 install -y hyprland \
   go \
   zsh \
   zsh-autosuggestions \
-  zsh-syntax-highlighting
+  zsh-syntax-highlighting \
+  cliphist \
+  wl-clipboard \
+  flatpak \
+  retroarch \
+  es-de \
+  nwg-look \
+  sassc \
+  gtk-murrine-engine \
+  gnome-themes-extra \
+  fastfetch
 
 # remove terra repo because it was causing ISO build errors due to no GPG key
 rm /etc/yum.repos.d/terra.repo
 
+# install pywal
 pipx install --global pywal16
 
-# need gtk theme
-# gtk icons
-# need to set up zsh still
-# need to do flatpaks still
-# need to also do spotify and emulation
+# flatpak installs
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.bitwarden.desktop
+flatpak install flathub com.spotify.Client
+flatpak install flathub com.visualstudio.code

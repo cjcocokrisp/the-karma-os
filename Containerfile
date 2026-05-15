@@ -40,6 +40,7 @@ RUN git clone https://github.com/cjcocokrisp/the-karma-os.git /usr/share/the-kar
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     cp /ctx/20-quiet-printk.conf /etc/sysctl.d/20-quiet-printk.conf
 
+# Run scripts to set up system
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
@@ -57,6 +58,16 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build-skel.sh
+
+# Install Brew
+COPY --from=ghcr.io/ublue-os/brew:latest /system_files /
+
+RUN --mount=type=cache,dst=/var/cache \
+    --mount=type=cache,dst=/var/log \
+    --mount=type=tmpfs,dst=/tmp \
+    /usr/bin/systemctl preset brew-setup.service && \
+    /usr/bin/systemctl preset brew-update.timer && \
+    /usr/bin/systemctl preset brew-upgrade.timer
 
     
 ### LINTING
