@@ -1,6 +1,8 @@
 #!/bin/bash
 # This script builds the skel for new users
 
+set -ouex pipefail
+
 # Init dirs
 mkdir -p /etc/skel/{Desktop,Documents,Downloads,Music,Pictures,Videos,code}
 mkdir -p /etc/skel/.config
@@ -43,5 +45,5 @@ cp /usr/share/the-karma-os/dotfiles/.p10k.zsh /etc/skel/.p10k.zsh
 wal -n -s -t -e --out-dir /etc/skel/.cache/wal -i /etc/skel/Pictures/wallpaper.jpg
 
 # Install GTK theme and icons
-cp -r /usr/share/the-karma-os/themes/Graphite-dark /usr/share/themes/
+cp -r /usr/share/the-karma-os/themes/Graphite-Dark /usr/share/themes/
 cp -r /usr/share/the-karma-os/icons/oomox-summer-fragrance /usr/share/icons/
