@@ -14,7 +14,7 @@ dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-releas
 dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
 #  Upgrade all packages
-dnf -y upgrade
+# dnf -y upgrade
 
 # Install packages
 dnf5 install -y hyprland \
