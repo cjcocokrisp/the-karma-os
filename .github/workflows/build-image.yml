@@ -9,6 +9,9 @@ on:
       - '**/.gitignore'
       - '**/LICENSE'
       - '**/CHANGELOG.md'
+      - 'docs/**'
+      - 'screenshots/**'
+      - '.github/**'
   schedule:
     # Everyday at midnight in EST
     - cron: '0 0 * * *'

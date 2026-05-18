@@ -49,6 +49,5 @@ music track.
   - EmulationStation DE
   - Bitwarden Password Manager
   - Visual Studio Code
-  - OBS Studio
 - Set up instructions on how to download and get started using this image along with
 information on using with multimonitor & ultrawide
