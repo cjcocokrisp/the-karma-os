@@ -29,6 +29,9 @@ FROM quay.io/fedora/fedora-bootc:43
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
+# Disable bootc auto update fetch so PC doesn't restart while using it because this happened :(
+RUN systemctl disable bootc-fetch-apply-updates.timer
+
 # Install things needed for all the steps
 RUN dnf5 install -y git \
                     'dnf5-command(copr)'
