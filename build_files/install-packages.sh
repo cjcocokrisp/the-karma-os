@@ -8,6 +8,7 @@ dnf copr enable -y solopasha/hyprland
 dnf copr enable -y sneexy/zen-browser
 dnf copr enable -y varlad/eww
 dnf copr enable -y che/nerd-fonts
+dnf copr enable -y apicalshark/ProtonUp-Qt
 
 # Set up RPM fusion & terra repo
 dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
@@ -75,7 +76,10 @@ dnf5 install -y hyprland \
   gtk-murrine-engine \
   gnome-themes-extra \
   fastfetch \
-  ruby
+  ruby \
+  tailscale \
+  google-noto-color-emoji-fonts \
+  protonup-qt
 
 # remove terra repo because it was causing ISO build errors due to no GPG key
 rm /etc/yum.repos.d/terra.repo

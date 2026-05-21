@@ -12,7 +12,22 @@ program or something into the image that is not super
 major.
 - Z: Fixes, will be bumped when a fix needs to happen
 
-### v1.0.0 - Summer Fragrance 
+### v1.1.0 - Birthday Patch
+
+Date: May 21st, 2026
+
+Quick updates and some new packages for my 22nd birthday!
+
+#### Contents
+- Added keybinds and config for grouping in Hyprland
+- Added the following packages
+  - tailscale
+  - proton up
+  - google emoji fonts
+
+### v1.0.0 - Summer Fragrance
+
+Date: May 16th, 2025
 
 The first release of the image! This has been an idea in my head for
 sometime now and I'm happy that I finally got around to completing it.
