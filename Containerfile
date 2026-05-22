@@ -30,7 +30,9 @@ FROM quay.io/fedora/fedora-bootc:43
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 # Disable bootc auto update fetch so PC doesn't restart while using it because this happened :(
-RUN systemctl disable bootc-fetch-apply-updates.timer
+RUN systemctl disable bootc-fetch-apply-updates.timer && \
+    systemctl mask bootc-fetch-apply-updates.timer
+
 
 # Install things needed for all the steps
 RUN dnf5 install -y git \
