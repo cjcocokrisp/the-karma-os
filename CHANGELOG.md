@@ -20,6 +20,7 @@ Quick updates and some new packages for my 22nd birthday!
 
 #### Contents
 - Added keybinds and config for grouping in Hyprland
+- Added some window rules for pop uppy things for better looks
 - Added the following packages
   - tailscale
   - proton up
