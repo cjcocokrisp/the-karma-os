@@ -79,7 +79,9 @@ dnf5 install -y hyprland \
   ruby \
   tailscale \
   google-noto-color-emoji-fonts \
-  protonup-qt
+  protonup-qt \
+  lsusb \
+  kernel-modules-extra
 
 # remove terra repo because it was causing ISO build errors due to no GPG key
 rm /etc/yum.repos.d/terra.repo

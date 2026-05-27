@@ -12,6 +12,15 @@ program or something into the image that is not super
 major.
 - Z: Fixes, will be bumped when a fix needs to happen
 
+### v1.2.0 - Controller Patch
+
+Date: May 26th, 2026
+
+#### Contents
+- Added the following packages to use my leverless
+  - lsusb
+  - kernel-modules-extra
+
 ### v1.1.0 - Birthday Patch
 
 Date: May 21st, 2026
