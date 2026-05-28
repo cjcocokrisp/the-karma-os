@@ -12,6 +12,18 @@ program or something into the image that is not super
 major.
 - Z: Fixes, will be bumped when a fix needs to happen
 
+### v1.3.0 - Splash Screen Patch
+
+Date: May 28th, 2026
+
+#### Contents
+- Add plymouth splash screen
+- Make systemd silent so it doesn't bleed through tuigreet + greetd
+- Add window rules for bitwarden
+- Add keybind for fullscreen
+- Added the following packages
+  - plymouth
+
 ### v1.2.0 - Controller Patch
 
 Date: May 26th, 2026

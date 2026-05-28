@@ -81,7 +81,8 @@ dnf5 install -y hyprland \
   google-noto-color-emoji-fonts \
   protonup-qt \
   lsusb \
-  kernel-modules-extra
+  kernel-modules-extra \
+  plymouth
 
 # remove terra repo because it was causing ISO build errors due to no GPG key
 rm /etc/yum.repos.d/terra.repo

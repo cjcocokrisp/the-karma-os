@@ -33,6 +33,8 @@ FROM quay.io/fedora/fedora-bootc:43
 RUN systemctl disable bootc-fetch-apply-updates.timer && \
     systemctl mask bootc-fetch-apply-updates.timer
 
+# Set quiet systemd boot
+RUN echo 'kargs = ["quiet", "splash", "rd.udev.log_level=3"]' > /usr/lib/bootc/kargs.d/01-silent-and-plymouth.toml
 
 # Install things needed for all the steps
 RUN dnf5 install -y git \
