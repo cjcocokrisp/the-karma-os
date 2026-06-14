@@ -13,8 +13,8 @@ on:
       - 'screenshots/**'
       - '.github/**'
   schedule:
-    # Everyday at midnight in EST, run only on Sundays to not use all of storage for actions
-    - cron: '0 0 * * 0'
+    # Everyday at midnight in EST
+    - cron: '0 0 * * *'
       timezone: "America/New_York"
   workflow_dispatch:
 

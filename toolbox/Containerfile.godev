@@ -1,0 +1,23 @@
+FROM registry.fedoraproject.org/fedora-toolbox:43
+
+ARG GO_VERSION=1.26.4
+ARG ARCH=amd64
+
+# Install packages
+RUN dnf -y install \
+      kitty-terminfo \
+      vim \
+      nvim \
+      zsh \
+      zsh-autosuggestions \
+      zsh-syntax-highlighting \
+      make \
+      timg
+
+# Install Golang
+RUN curl -LO https://go.dev/dl/go${GO_VERSION}.linux-${ARCH}.tar.gz \
+    && rm -rf /usr/local/go \
+    && tar -C /usr/local -xzf go${GO_VERSION}.linux-${ARCH}.tar.gz \
+    && rm go${GO_VERSION}.linux-amd64.tar.gz
+
+ENV PATH="/usr/local/go/bin:${PATH}"
