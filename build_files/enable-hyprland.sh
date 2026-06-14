@@ -2,6 +2,8 @@
 
 set -ouex pipefail
 
+sudo systemctl disable gdm.service
+
 # Enable and configure greetd
 mkdir -p /etc/greetd
 cp /usr/share/the-karma-os/dotfiles/greetd/config.toml /etc/greetd/config.toml

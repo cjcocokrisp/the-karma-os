@@ -82,7 +82,8 @@ dnf5 install -y hyprland \
   protonup-qt \
   lsusb \
   kernel-modules-extra \
-  plymouth
+  plymouth \
+  gparted
 
 # remove terra repo because it was causing ISO build errors due to no GPG key
 rm /etc/yum.repos.d/terra.repo

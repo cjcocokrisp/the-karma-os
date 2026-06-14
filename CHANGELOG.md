@@ -12,6 +12,16 @@ program or something into the image that is not super
 major.
 - Z: Fixes, will be bumped when a fix needs to happen
 
+### v1.4.0 - Development Patch
+
+Date: June 14th, 2026
+
+#### Contents
+- Add gparted as a package for working with disk partitioning
+- Added a new directory `toolbox/` with container images that can be used with toolbox for development
+  - This can be accessed by going to where the repo is cloned on the system to build and then use locally
+  - A container for Go development was added
+
 ### v1.3.0 - Splash Screen Patch
 
 Date: May 28th, 2026
