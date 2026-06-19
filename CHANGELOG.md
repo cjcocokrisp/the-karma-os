@@ -12,6 +12,15 @@ program or something into the image that is not super
 major.
 - Z: Fixes, will be bumped when a fix needs to happen
 
+### v1.4.1 - Hyprland Binds + Vars Fix
+
+Date: June 19th, 2026
+
+#### Contents
+- Synced the following Hyprland files as they were not updated when I added window rules
+  - `binds.conf`
+  - `vars.conf`
+
 ### v1.4.0 - Development Patch
 
 Date: June 14th, 2026
