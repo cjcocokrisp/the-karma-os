@@ -12,6 +12,13 @@ program or something into the image that is not super
 major.
 - Z: Fixes, will be bumped when a fix needs to happen
 
+### v1.4.2 - First Fix That Needed To Be Done
+
+Date: August 12th, 2026
+
+#### Contents
+- Fixed an issue where the hyprland copr repo was not resolving for Fedora 43
+
 ### v1.4.1 - Hyprland Binds + Vars Fix
 
 Date: June 19th, 2026

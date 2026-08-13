@@ -4,7 +4,7 @@ set -ouex pipefail
 
 # Install packages for the system
 # Enable copr repos
-dnf copr enable -y solopasha/hyprland
+dnf copr enable -y solopasha/hyprland fedora-rawhide-x86_64
 dnf copr enable -y sneexy/zen-browser
 dnf copr enable -y varlad/eww
 dnf copr enable -y che/nerd-fonts
