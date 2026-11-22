@@ -12,6 +12,13 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.kill())
 hl.bind(mainMod .. " + O", hl.dsp.window.float({ action = "toggle" })) 
 hl.bind(mainMod .. " + I", hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exit())
+hl.bind("CTRL + ALT + Q", hl.dsp.exec_cmd(vars.lock))
+
+--- Screenshot binds
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(vars.screenshotRegion))
+hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd(vars.screenshotFull))
+hl.bind(mainMod .. " + CTRL + S", hl.dsp.exec_cmd(vars.screenshotWindow))
 
 --- Application launch binds
 hl.bind(mainMod .. "+ Return", hl.dsp.exec_cmd(vars.terminal))
@@ -28,7 +35,7 @@ hl.bind(mainMod .. "+ S", hl.dsp.exec_cmd(vars.monitor))
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
     hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
-    hl.bind(mainMod .. " + " .. key, hl.dsp.window.move({ workspace = i }))
+    hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
 --- Move/use Special workspace with mainMod + grave
