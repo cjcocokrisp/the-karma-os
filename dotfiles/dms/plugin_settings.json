@@ -1,0 +1,22 @@
+{
+  "dankActions": {
+    "enabled": true,
+    "variants": [
+      {
+        "icon": "water_drop",
+        "displayText": "",
+        "displayCommand": "cd ./scripts/dexcom && go run ./dexcom.go",
+        "clickCommand": "",
+        "middleClickCommand": "",
+        "rightClickCommand": "",
+        "updateInterval": 300,
+        "showIcon": true,
+        "showText": true,
+        "visibilityCommand": "",
+        "visibilityInterval": 0,
+        "id": "variant_1795471058796",
+        "name": "Dexcom"
+      }
+    ]
+  }
+}

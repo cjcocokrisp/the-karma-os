@@ -1,0 +1,10 @@
+{
+  "lockfileVersion": 1,
+  "plugins": {
+    "dankActions": {
+      "repo": "https://github.com/duxlabs-dev/dux-plugins",
+      "path": "DankActions",
+      "commit": "a486ffcf15f81d578710fae31d6129b3a210d3f5"
+    }
+  }
+}
