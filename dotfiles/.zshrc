@@ -1,3 +1,5 @@
+python ~/scripts/terminal-header/display.py
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -111,11 +113,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias clear="clear && python ~/scripts/terminal-header/display.py"
+alias kc=kubectl
 
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-python ~/scripts/terminal-header/display.py
 
 export EDITOR="vim"
 export VISUAL="vim"

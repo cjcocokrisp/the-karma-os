@@ -179,9 +179,9 @@
   # For example: POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(os_icon context_joined)
 
   # The right end of left prompt.
-  typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL='%K{#4a4a5c} %K{#363645} %K{#252530} %k'
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL='%K{4} %K{6} %K{12} %k'
   # The left end of right prompt.
-  typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL='%K{#252530} %K{#363645} %K{#4a4a5c} %k'
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL='%K{12} %K{13} %K{14} %k'
   # The left end of left prompt.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL=''
   # The right end of right prompt.
@@ -221,9 +221,9 @@
 
   ##################################[ dir: current directory ]##################################
   # Current directory background color.
-  typeset -g POWERLEVEL9K_DIR_BACKGROUND="#5c5c70"
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND="4"
   # Default current directory foreground color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND="#c2c2c6"
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND="#254"
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
@@ -553,8 +553,8 @@
 
   ###################[ command_execution_time: duration of the last command ]###################
   # Execution time color.
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=#c2c2c6
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=#5c5c70
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=0
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=3
   # Show duration of the last command if takes at least this many seconds.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
   # Show this many fractional digits. Zero means round to seconds.
@@ -1757,8 +1757,8 @@
 
   ####################################[ time: current time ]####################################
   # Current time color.
-  typeset -g POWERLEVEL9K_TIME_FOREGROUND="#c2c2c6"
-  typeset -g POWERLEVEL9K_TIME_BACKGROUND="#5c5c70"
+  typeset -g POWERLEVEL9K_TIME_FOREGROUND=0
+  typeset -g POWERLEVEL9K_TIME_BACKGROUND=7
   # Format for the current time: 09:51:02. See `man 3 strftime`.
   typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%I:%M:%S %p}'
   # If set to true, time will update when you hit enter. This way prompts for the past
