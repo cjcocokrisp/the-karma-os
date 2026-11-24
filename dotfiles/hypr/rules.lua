@@ -4,13 +4,13 @@
 
 hl.window_rule({
     name = "file-explorer-opacity",
-    match = { class = "^(org.gnome.Nautilus)$" },
-    opacity = "0.95 0.95",
+    match = { class = "^(org.kde.dolphin)$" },
+    opacity = "0.90 0.90",
 })
 
 hl.window_rule({
     name = "spotify-ws-special",
-    match = { class = "^(spotify)$" },
+    match = { class = "^(Spotify)$" },
     workspace = "special:magic",
 })
 
