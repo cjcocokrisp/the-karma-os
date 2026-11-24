@@ -1,0 +1,17 @@
+FROM registry.fedoraproject.org/fedora-toolbox:43
+
+# Install packages
+RUN dnf -y install \
+      kitty-terminfo \
+      vim \
+      nvim \
+      zsh \
+      zsh-autosuggestions \
+      zsh-syntax-highlighting \
+      timg
+
+# Install Hugo
+RUN wget https://github.com/gohugoio/hugo/releases/download/v0.155.3/hugo_extended_0.155.3_linux-amd64.tar.gz && \
+    tar -xzf hugo_extended_0.155.3_linux-amd64.tar.gz && \
+    mv hugo /usr/local/bin/ && \
+    rm hugo_extended_0.155.3_linux-amd64.tar.gz
