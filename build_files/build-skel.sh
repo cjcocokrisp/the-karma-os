@@ -5,22 +5,12 @@ set -ouex pipefail
 
 # Init dirs
 mkdir -p /etc/skel/{Desktop,Documents,Downloads,Music,Pictures,Videos,code}
-mkdir -p /etc/skel/.config
-mkdir -p /etc/skel/.cache/wal
-
-# Move wallpapers into pictures
-cp /usr/share/the-karma-os/wallpapers/summer-fragrance.jpg /etc/skel/Pictures/wallpaper.jpg
-cp /usr/share/the-karma-os/wallpapers/summer-fragrance_ultrawide.jpg /etc/skel/Pictures/wallpaper_ultrawide.jpg
 
 # Copy dotfiles into .config
 cp -r /usr/share/the-karma-os/dotfiles/hypr /etc/skel/.config/
 cp -r /usr/share/the-karma-os/dotfiles/kitty /etc/skel/.config/
-cp -r /usr/share/the-karma-os/dotfiles/mako /etc/skel/.config/
-cp -r /usr/share/the-karma-os/dotfiles/rofi /etc/skel/.config/
-cp -r /usr/share/the-karma-os/dotfiles/waybar /etc/skel/.config/
 cp -r /usr/share/the-karma-os/dotfiles/fastfetch /etc/skel/.config/
-cp -r /usr/share/the-karma-os/dotfiles/eww /etc/skel/.config/
-cp -r /usr/share/the-karma-os/dotfiles/gtk-3.0 /etc/skel/.config/
+cp -r /usr/share/the-karma-os/dotfiles/dms /etc/skel/.config/
 
 # Clone my nvim config
 git clone https://github.com/cjcocokrisp/nvim /etc/skel/.config/nvim
@@ -40,10 +30,3 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /etc/skel/.oh-m
 
 cp /usr/share/the-karma-os/dotfiles/.zshrc /etc/skel/.zshrc
 cp /usr/share/the-karma-os/dotfiles/.p10k.zsh /etc/skel/.p10k.zsh
-
-# Run pywal so color cache is present on first launch
-wal -n -s -t -e --out-dir /etc/skel/.cache/wal -i /etc/skel/Pictures/wallpaper.jpg
-
-# Install GTK theme and icons
-cp -r /usr/share/the-karma-os/themes/Graphite-Dark /usr/share/themes/
-cp -r /usr/share/the-karma-os/icons/oomox-summer-fragrance /usr/share/icons/

@@ -4,89 +4,52 @@ set -ouex pipefail
 
 # Install packages for the system
 # Enable copr repos
-dnf copr enable -y solopasha/hyprland fedora-rawhide-x86_64
-dnf copr enable -y sneexy/zen-browser
-dnf copr enable -y varlad/eww
+dnf copr enable -y lionheartp/Hyprland
+dnf copr enable -y avengemedia/dms
 dnf copr enable -y che/nerd-fonts
-dnf copr enable -y apicalshark/ProtonUp-Qt
-
-# Set up RPM fusion & terra repo
-dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
 #  Upgrade all packages
 # dnf -y upgrade
 
 # Install packages
-dnf5 install -y hyprland \
-  greetd \
-  greetd-selinux \
-  tuigreet \
+dnf5 install -y \
+  hyprland \
+  hyprland-guiutils \
+  ly \
   tuned \
   tuned-ppd \
   kitty \
-  tmux \
-  waybar \
-  eww \
   hyprpolkitagent \
-  nautilus \
-  pavucontrol \
+  dolphin \
   alsa-sof-firmware \
   alsa-utils \
-  blueman \
   NetworkManager-wifi \
   iwl* \
-  nm-connection-editor-desktop \
   gvfs \
   gvfs-mtp \
-  hyprlock \
   hyprshot \
   hyprpaper \
-  nautilus \
-  rofi \
-  vim \
-  nvim \
-  discord \
-  steam \
-  gamescope \
-  zen-browser \
-  pipx \
-  network-manager-applet \
-  blueman-applet \
   timg \
-  btop \
   nerd-fonts \
   adobe-source-code-pro-fonts \
-  sourcecodepro-nerd-fonts \
-  pavucontrol \
-  ImageMagick \
   breeze-cursor-theme \
-  mako \
-  go \
+  breeze-icon-theme \
   zsh \
   zsh-autosuggestions \
   zsh-syntax-highlighting \
-  cliphist \
   wl-clipboard \
   flatpak \
-  retroarch \
-  es-de \
-  nwg-look \
-  sassc \
-  gtk-murrine-engine \
-  gnome-themes-extra \
-  fastfetch \
-  ruby \
-  tailscale \
   google-noto-color-emoji-fonts \
-  protonup-qt \
   lsusb \
   kernel-modules-extra \
-  plymouth \
-  gparted
+  dms \
+  upower \
+  qt6ct \
+  nix \
+  nix-daemon \
+  make \
+  ruby # needed for brew
 
-# remove terra repo because it was causing ISO build errors due to no GPG key
-rm /etc/yum.repos.d/terra.repo
-
-# install pywal
-pipx install --global pywal16
+# Turn on services for power management
+systemctl enable tuned
+systemctl enable upower
