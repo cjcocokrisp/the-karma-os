@@ -4,7 +4,7 @@
 
 local vars = {
     terminal         = "kitty",
-    fileManager      = "nautilus --new-window",
+    fileManager      = "dolphin",
     menu             = "dms ipc call spotlight toggle",
     lock             = "dms ipc call lock lock",
     chat             = "discord",
