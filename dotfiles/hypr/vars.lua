@@ -22,6 +22,7 @@ local vars = {
     widgets          = "eww daemon",
     statusBar        = "waybar",
     audioMixer       = "pavucontrol",
+    shell            = "dms run",
 }
 
 return vars
