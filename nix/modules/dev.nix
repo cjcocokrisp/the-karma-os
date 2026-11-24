@@ -21,5 +21,9 @@
     
     settings.signing.format = "ssh";
   };
+
+  programs.vscodium = {
+    enable = true;
+  };
 }
 
