@@ -2,6 +2,7 @@
 
 {
   nixpkgs.config.allowUnfree = true;
+  services.flatpak.enable = true;
 
   # Modules to install based on different categories.
   # If you do not want one of these just uncomment it.
