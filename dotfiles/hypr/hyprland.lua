@@ -27,6 +27,7 @@ hl.monitor({
 --
 hl.on("hyprland.start", function () 
    hl.exec_cmd(vars.terminal)
+   hl.exec_cmd(vars.shell)
  end)
 
 
