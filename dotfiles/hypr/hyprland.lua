@@ -129,7 +129,6 @@ hl.config({
 hl.config({
     dwindle = {
         preserve_split = true, -- You probably want this
-        special_scale_factor = 0.85,
     },
 })
 
@@ -191,6 +190,10 @@ hl.config({
             natural_scroll = false,
         },
     },
+
+    xwayland = {
+        force_zero_scaling = true,
+    }
 })
 
 hl.gesture({
