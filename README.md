@@ -1,6 +1,8 @@
 # The Karma OS
 
-![Screenshot of the main view with fastfetch open](./screenshots/ultrawide_terminal.png)
+![Screenshot of the main view with summer fragrance](./screenshots/sf-v2.png)
+![Screenshot of the main view with your lie in april background](./screenshots/yourlie-v2.png)
+![Screenshot of the main view with red caligraphyyou h](./screenshots/redcal-v2.png)
 
 ## About
 
@@ -17,20 +19,14 @@ for a full history on what's included.
 
 - Window Manager: Hyprland
 - Terminal+Shell: Kitty+Zsh
-- File Manager: Nautilus
-- Lock Screen: Hyprlock
-- Status Bar: Waybar
-- Systray Widget: Eww
-- Terminal Programs
-- Applications
-    - Discord
-    - Steam
-    - EmulationStation DE
-    - Retroarch
-    - Visual Studio Code (Through flatpak script)
-    - Zen Browser
-    - Spotify (Through flatpak script)
-    - Bitwarden Password Manager (Through flatpak script)
+- File Manager: Dolphin
+- Shell: Dux Modular Shellr
+- Login Manager: ly
+- Nix Home-Manager for Apps in the following categories:
+  - Essentials (discord, spotify, zen browser, obs, etc)
+  - Development (neovim, go, gcc, etc)
+  - Gaming (steam, prism launcer, retroarch, etc)
+  - Homelab (kubectl, tailscale, k9s, etc)
 
 ## CI Workflows
 
@@ -68,17 +64,26 @@ ways to try and get it to work and had no luck so make sure it's installed into 
 
 This step is really simple just boot into the OS with the user that you created during installation.
 
-### Step 4: Manual Edits
+### Step 4: Manual Configuration
 
 I could not think of easy ways to automate somethings so here are a list of manual changes that must be made.
 
-- Set GTK theming to `Graphite-Dark` and icons to `oomox-summer-fragrance`
-- Set font to `Source Code Pro`
+- Edit the following DMS configuration
+  - Reinstall plugins with `dms plugins restore ~/.config/dms/plugins.lock.json`
+  - Readd the Dexcom widget to the bar after syncing in
+  - Apply QT and GTK settings with the option
+  - Set wallpaper directory to the wallpapers directory in the repo
+  - Set profile picture with the one you'd want
 - Sign into Dexcom by editing `~/scripts/dexcom/.env` 
 - Edit `/etc/fstab` and comment out the line about the root
-- Run `~/scripts/install-flatpaks.sh` to install flatpak apps
-- Set btop theme to `tty`
 - If on desktop make the edits in [desktop-adjustments.md](./docs/desktop-adjustments.md)
+- Install user apps with Nix by going to the nix folder in this repo
+  - Run `nix-shell -p home-manager` to install home-manager
+  - Run make to install all of the packages
+    - If there are any you do not want comment out the module in `nix/home.nix` or the package in
+      the modules
+  - Once complete you will see a GPU command, make sure to run that for Steam to work
+  - Run this command to also make Steam work: `sudo ln -s /usr/share/zoneinfo /etc/zoneinfo`
 
 ## Upgrades
 
@@ -89,9 +94,6 @@ sudo bootc upgrade
 
 ## Acknowledgements
 
-Below are the links to configs, dotfiles, themes, and more that I used to help make this.
-
-- https://www.pixiv.net/en/artworks/67308965
-- https://github.com/vinceliuice/Graphite-gtk-theme
-- https://github.com/adi1090x/rofi
-- https://github.com/mahaveergurjar/Hyprlock-Dots
+I unfortunate did not save the links to the wallpapers that I used as I found them via other
+GitHub repos. But I give all credit to the artists and creators of the wallpapers in this repo.
+All of them are awesome.

@@ -12,6 +12,26 @@ program or something into the image that is not super
 major.
 - Z: Fixes, will be bumped when a fix needs to happen
 
+### v2.0.0 - Soleil
+
+Date November 24th, 2026 
+
+This is the first major release since the original version. A lot has changed here
+and based on weird things of run into in my usage. A blog post will be up on my
+blog (https://blog.cjcocokrisp.dev) soon talking about why I made the changes.
+
+### Contents
+- Instead of using my own waybar, rofi, mako, eww, etc. Dux Modular Shell is now
+the default
+- User applications are now managed with Nix through home-manager (brew is still here)
+  - Modules for installing have been added (dev, gaming, essentials, and homelab)
+- A ton of new wallpapers have been added (and DMS supports on the fly color changing)
+- There is now a migration guide from v1 to v2 in `docs/`
+- Desktop adjustments docs has been updated for the new version
+- Hyprland configs have been migrated to lua
+- Login manager has been switched to ly from greetd + tuigreet
+- File explorer switched to dolphin
+
 ### v1.4.2 - First Fix That Needed To Be Done
 
 Date: August 12th, 2026
