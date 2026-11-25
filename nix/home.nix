@@ -23,7 +23,6 @@
   targets.genericLinux.gpu.enable = true;
   # Enable xdg so you nix installed stuff can be seen elsewhere
   xdg.enable = true;
-  xdg.configFile."mimeapps.list".force = true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
