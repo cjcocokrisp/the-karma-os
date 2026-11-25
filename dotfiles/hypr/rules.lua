@@ -16,7 +16,7 @@ hl.window_rule({
 
 hl.window_rule({
     name = "discord-ws-10",
-    match = { class = "^(discord)$" },
+    match = { class = "^(vesktop)$" },
     workspace = "10",
 })
 
