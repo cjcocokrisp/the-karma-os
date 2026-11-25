@@ -7,6 +7,7 @@
     tmux
     btop
     go
+    gcc
   ];
 
   programs.git = {
