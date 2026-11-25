@@ -54,4 +54,5 @@ dnf5 group install -y fonts
 
 # Turn on services for power management
 #systemctl enable tuned
+systemctl disable tuned 2>/dev/null || true
 systemctl enable upower
