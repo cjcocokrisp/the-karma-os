@@ -18,6 +18,7 @@ dnf5 install -y \
   ly \
   tuned \
   tuned-ppd \
+  bluez \
   kitty \
   hyprpolkitagent \
   dolphin \
