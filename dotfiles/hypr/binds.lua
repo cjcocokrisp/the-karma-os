@@ -28,8 +28,8 @@ hl.bind(mainMod .. "+ D", hl.dsp.exec_cmd(vars.chat))
 hl.bind("SUPER_L", hl.dsp.exec_cmd(vars.dashboard), { release = true })
 hl.bind(mainMod .. "+ Z", hl.dsp.exec_cmd(vars.browser))
 hl.bind(mainMod .. "+ X", hl.dsp.exec_cmd(vars.games))
-hl.bind(mainMod .. "+ Z", hl.dsp.exec_cmd(vars.bluetooth))
 hl.bind(mainMod .. "+ S", hl.dsp.exec_cmd(vars.monitor))
+hl.bind(mainMod .. "+ A", hl.dsp.exec_cmd(vars.media))
 
 --- Switch workspaces with mainMod + [0-9]
 for i = 1, 10 do

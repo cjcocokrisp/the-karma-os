@@ -9,20 +9,14 @@ local vars = {
     lock             = "dms ipc call lock lock",
     chat             = "vesktop",
     games            = "steam",
-    browser          = "zen-browser",
-    bluetooth        = "blueman-manager",
-    bluetoothDaemon  = "blueman-applet",
-    wifiDaemon       = "nm-applet --indicator",
+    browser          = "flatpak run app.zen_browser.zen",
     dashboard        = "dms ipc call control-center toggle",
     screenshotRegion = "hyprshot -m region -o ~/Pictures/Screenshots",
     screenshotWindow = "hyprshot -m window -o ~/Pictures/Screenshots",
     screenshotFull   = "hyprshot -m output -o ~/Pictures/Screenshots",
     monitor          = "dms ipc call processlist toggle",
-    notifications    = "mako",
-    widgets          = "eww daemon",
-    statusBar        = "waybar",
-    audioMixer       = "pavucontrol",
     shell            = "dms run",
+    media            = "dms ipc call dash toggle media",
 }
 
 return vars

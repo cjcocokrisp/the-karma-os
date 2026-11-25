@@ -2,7 +2,7 @@ local vars = require("./vars")
 require("./rules")
 require("./binds")
 require("./animations")
-#require("./dms/colors")
+--- require("./dms/colors")
 
 ------------------
 ---- MONITORS ----
@@ -259,4 +259,4 @@ hl.window_rule({
     float = true,
 })
 
-#require("dms-theme-sync")
+--- require("dms-theme-sync")
