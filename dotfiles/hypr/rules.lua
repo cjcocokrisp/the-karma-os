@@ -22,7 +22,7 @@ hl.window_rule({
 
 hl.window_rule({
     name = "bitwarden-float-size",
-    match = { class = "^(Bitwarden)$" },
+    match = { class = "^(bitwarden)$" },
     float = true,
     size = { 900, 600 },
     center = true,
@@ -30,7 +30,7 @@ hl.window_rule({
 
 hl.window_rule({
     name = "btop-float-size",
-    match = { class = "^(Bitwarden)$" },
+    match = { class = "^(bitwarden)$" },
     float = true,
     size = { 1000, 600 },
     center = true,

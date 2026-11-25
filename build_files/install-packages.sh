@@ -50,6 +50,8 @@ dnf5 install -y \
   make \
   ruby # needed for brew
 
+dnf5 group install -y fonts
+
 # Turn on services for power management
-systemctl enable tuned
+#systemctl enable tuned
 systemctl enable upower
