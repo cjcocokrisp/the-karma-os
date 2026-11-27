@@ -12,6 +12,17 @@ program or something into the image that is not super
 major.
 - Z: Fixes, will be bumped when a fix needs to happen
 
+### v2.0.1 - The Discord Paradox
+
+Date November 27, 2026
+
+Vesktop was having issues with my mic so I moved to flatpak installed Discord.
+Eventually I might move back to baking that into the image because flatpak and
+vesktop both could not find local games.
+
+### Contents
+- Switch Discord to the flatpak installation
+
 ### v2.0.0 - Soleil
 
 Date November 24th, 2026 

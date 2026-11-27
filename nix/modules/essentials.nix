@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    vesktop
     spotify
     bitwarden-desktop
     mediawriter
@@ -17,6 +16,7 @@
   ];
 
   services.flatpak.packages = [
+    "com.discordapp.Discord"
     "com.obsproject.Studio"
     "app.zen_browser.zen"
   ];
